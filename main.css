@@ -11,7 +11,6 @@
 /* General body styling */
 html, body {
     font-family: 'ABC Synt Unlicensed Trial';
-
     height: 100%; /* Ensure full height */
     margin: 0;
     padding: 0;
@@ -19,7 +18,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Disable scrolling on the page */
+    overflow: auto; /* Allow scrolling */
 }
 
 body {
@@ -30,4 +29,47 @@ body {
     height: 100vh; /* Ensure the body takes up the full viewport height */
 }
 
+/* Styling for the statement content */
+.statement-content {
+    width: 700px; /* Fixed width for the textbox */
+    text-align: left; /* Left-align the content */
+    padding: 20px;
+}
 
+/* Close button styling */
+.close-button {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 20px; /* Space between the button and the content */
+    position: absolute; /* Positioning the close button at the top-left */
+    top: 20px;
+    left: 20px;
+}
+
+/* Link styling */
+a {
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for links */
+a:hover {
+    font-style: italic; /* Make links italic on hover */
+}
+
+/* Close button hover effect */
+.close-button:hover {
+    font-style: normal; /* No italics on hover for the close button */
+}
+
+@media (max-width: 768px) {
+.statement-content {
+    width: 350px; /* Fixed width for the textbox */
+    text-align: left; /* Left-align the content */
+    padding: 20px;
+}
+
+}
