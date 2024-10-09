@@ -1,0 +1,159 @@
+/* Custom font face definition */
+@font-face {
+    font-family: 'ABC Synt Unlicensed Trial';
+    src: url('ABCSyntUnlicensedTrial-Regular.woff2') format('woff2'),
+         url('ABCSyntUnlicensedTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General body styling */
+html, body {
+    font-family: 'ABC Synt Unlicensed Trial';
+
+    height: 100%; /* Ensure full height */
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Disable scrolling on the page */
+}
+
+body {
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling of the background */
+    width: 100vw; /* Ensure the body takes up the full viewport width */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Keep padding the same */
+    border: 1px solid #cecece; /* Thinner border */
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 350px;  /* Smaller fixed width */
+    height: 200px; /* Smaller fixed height */
+    overflow: hidden; /* Prevent overflow from the content container */
+}
+
+/* Style for individual posts inside the frame */
+.post-box {
+    width: 100%;
+    height: 100%;  /* Full height of the container */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Styling for images inside the post box */
+.post-box img {
+    max-width: 100%;
+    max-height: 80%; /* Ensure the image doesn't overflow the box */
+    object-fit: contain;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+/* Styling for the text inside the post box */
+.post-box p {
+    font-size: 12px; /* Smaller text size */
+    color: #000;
+    margin: 10px;
+    padding: 0 10px;
+    text-align: center;
+    height: auto; /* Allow height to adjust based on content */
+    flex-grow: 1; /* Allow the text container to grow */
+    overflow-y: auto; /* Enable vertical scrolling if text overflows */
+    max-height: 100%; /* Limit the height to the container's height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide scrollbars for WebKit browsers (Chrome, Safari) */
+.post-box p::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+/* Hide scrollbars for Firefox */
+.post-box p {
+    scrollbar-width: none; /* Hides the scrollbar for Firefox */
+}
+
+/* Links inside post box */
+.post-box a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.post-box a:hover {
+    text-decoration: underline;
+}
+
+#added-by {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Bottom-left buttons container */
+#bottom-left-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Individual button styling */
+.button {
+    padding: 3px 8px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #cecece;
+    color: #fff;
+    border-color: #cecece;
+}
+
+@media (max-width: 768px) {
+    #content-container {
+        width: 80%; /* Reduce width for mobile */
+        max-width: 500px; /* Even smaller max-width */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    #added-by {
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        font-size: 12px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    
+
+ 
+
+}
