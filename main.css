@@ -11,6 +11,7 @@
 /* General body styling */
 html, body {
     font-family: 'ABC Synt Unlicensed Trial';
+    font-size: 12px;
     height: 100%; /* Ensure full height */
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ body {
 
 /* Styling for the statement content */
 .statement-content {
-    width: 700px; /* Fixed width for the textbox */
+    width: 500px; /* Fixed width for the textbox */
     text-align: left; /* Left-align the content */
     padding: 20px;
 }
@@ -40,7 +41,7 @@ body {
 .close-button {
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     padding: 5px;
     display: block;
     margin-bottom: 20px; /* Space between the button and the content */
